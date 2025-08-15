@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rico Resellz - PayPal Shop</title>
+<style>
+    body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    h1 {
+        color: red;
+    }
+    .product {
+        border: 1px solid red;
+        padding: 20px;
+        margin: 20px auto;
+        width: 300px;
+        background-color: #111;
+    }
+    input[type=submit] {
+        background: red;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    input[type=submit]:hover {
+        background: darkred;
+    }
+</style>
+</head>
+<body>
+<h1>Rico Resellz</h1>
+
+    <div class="product">
+        <h2>Earpods</h2>
+        <p>Price: $80.00</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="Resellzrico@gmail.com">
+            <input type="hidden" name="item_name" value="Earpods">
+            <input type="hidden" name="amount" value="80.00">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="submit" value="Buy Now">
+        </form>
+    </div>
+    
+    <div class="product">
+        <h2>Bakarat rogue 500</h2>
+        <p>Price: $80.00</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="Resellzrico@gmail.com">
+            <input type="hidden" name="item_name" value="Bakarat rogue 500">
+            <input type="hidden" name="amount" value="80.00">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="submit" value="Buy Now">
+        </form>
+    </div>
+    
+    <div class="product">
+        <h2>Tom fard tobacco vanil</h2>
+        <p>Price: $80.00</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="Resellzrico@gmail.com">
+            <input type="hidden" name="item_name" value="Tom fard tobacco vanil">
+            <input type="hidden" name="amount" value="80.00">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="submit" value="Buy Now">
+        </form>
+    </div>
+    
+</body>
+</html>
