@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RicoResellz Checkout</title>
+<style>
+  body {
+    background-color: black;
+    color: red;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  h2, h3 {
+    color: red;
+  }
+  form {
+    margin-bottom: 30px;
+  }
+  select {
+    padding: 5px;
+    margin-right: 10px;
+  }
+  input[type="submit"] {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<h2>RicoResellz Products</h2>
+
+<!-- Earpods -->
+<h3>Earpods</h3>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+  <input type="hidden" name="business" value="resellzrico@gmail.com">
+  <input type="hidden" name="cmd" value="_cart">
+  <input type="hidden" name="add" value="1">
+  <input type="hidden" name="item_name" value="Earpods">
+  <input type="hidden" name="currency_code" value="USD">
+  <label for="quantity_earpods">Quantity:</label>
+  <select name="quantity" id="quantity_earpods" onchange="updatePrice('price_earpods', this.value)">
+    <option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+  </select>
+  <input type="hidden" name="amount" id="price_earpods" value="80.00">
+  <input type="submit" value="Buy Now">
+</form>
+
+<!-- Bakarat Rouge 500 -->
+<h3>Bakarat Rouge 500</h3>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+  <input type="hidden" name="business" value="resellzrico@gmail.com">
+  <input type="hidden" name="cmd" value="_cart">
+  <input type="hidden" name="add" value="1">
+  <input type="hidden" name="item_name" value="Bakarat Rouge 500">
+  <input type="hidden" name="currency_code" value="USD">
+  <label for="quantity_bakarat">Quantity:</label>
+  <select name="quantity" id="quantity_bakarat" onchange="updatePrice('price_bakarat', this.value)">
+    <option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+  </select>
+  <input type="hidden" name="amount" id="price_bakarat" value="80.00">
+  <input type="submit" value="Buy Now">
+</form>
+
+<!-- Tom Fard Tobacco Vanil -->
+<h3>Tom Fard Tobacco Vanil</h3>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+  <input type="hidden" name="business" value="resellzrico@gmail.com">
+  <input type="hidden" name="cmd" value="_cart">
+  <input type="hidden" name="add" value="1">
+  <input type="hidden" name="item_name" value="Tom Fard Tobacco Vanil">
+  <input type="hidden" name="currency_code" value="USD">
+  <label for="quantity_tomfard">Quantity:</label>
+  <select name="quantity" id="quantity_tomfard" onchange="updatePrice('price_tomfard', this.value)">
+    <option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+  </select>
+  <input type="hidden" name="amount" id="price_tomfard" value="80.00">
+  <input type="submit" value="Buy Now">
+</form>
+
+<script>
+function updatePrice(priceId, qty) {
+  let quantity = parseInt(qty);
+  let price = 80;
+  if(quantity >= 5 && quantity <= 9) price = 60;
+  if(quantity >= 10) price = 50;
+  document.getElementById(priceId).value = price;
+}
+</script>
+
+</body>
+</html>
+<!-- Final Checkout Button -->
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+  <input type="hidden" name="cmd" value="_cart">
+  <input type="hidden" name="business" value="resellzrico@gmail.com">
+  <input type="hidden" name="display" value="1">
+  <input type="submit" value="View Cart / Checkout">
+</form>
